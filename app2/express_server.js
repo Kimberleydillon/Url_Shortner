@@ -53,8 +53,8 @@ app.post("/urls", (req, res) => {
  res.redirect("/urls");
 })
 
-app.post('/urls', (req,res) => {
-{delete: req.params.id};  //how to delete?
+app.post('/:id/delete', (req,res) => {
+delete urlDatabase[req.params.id];
 res.redirect("/urls");
 })
 // app.post("/urls", (req, res) => {
