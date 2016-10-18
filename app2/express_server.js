@@ -53,6 +53,10 @@ app.post("/urls", (req, res) => {
  res.redirect("/urls");
 })
 
+app.post('/urls', (req,res) => {
+{delete: req.params.id};  //how to delete?
+res.redirect("/urls");
+})
 // app.post("/urls", (req, res) => {
 //   console.log(req.body);
 //   let longURL = req.body['longURL'];
