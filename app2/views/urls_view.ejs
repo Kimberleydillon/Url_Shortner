@@ -1,3 +1,10 @@
-<%= shortURL %>
+<h1>Shorty URL: <%=shortURL%> </h1>
 
+
+<form action="/<%=shortURL%>/update" method="POST" style="margin:150px;">
+
+      <label for="newlongURL"></label>
+      <input id="newlongURL" type="text" name="newlongURL" placeholder="http://"style="width: 300px">
+      <input type="submit" value="Update">
+    </form>
 
