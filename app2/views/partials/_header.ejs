@@ -1,12 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-<%username%>
+<%=username%>
 <h1> Get Shorty </h1>
-<form action="/login"  method="POST" style="margin:150px;">
+<% if (typeof username !== 'undefined') { %>
+  <form action="/logout"  method="POST" style="margin:150px">
+      <input type="submit" value="Log Out">
+ </form>
+<%}else{%>
+<form action="/login"  method="POST" style="margin:150px">
       <label for="username"></label>
       <input name="username" type="text" style="width: 300px">
-      <input type="submit" value="Submit">
+      <input type="submit" value="Log In">
+<%}%>
 </form>
 </body>
 </html>
+
+
+<!-- write an if statement that checks to see if username is present if so go to logout form.
+Display the username (maybe like how you did //:http before) -->
+<!-- (cookiePresent  == "username") -->
