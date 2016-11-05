@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <body>
-    <!-- Write EJS code here to display shortened links -->
-    <% include partials/_header %>
+  <% include partials/_header %>
     <ul>
-      <% for (url in urls){ %>
-          <li><a href="http://localhost:8080/<%= url %>">http://localhost:8080/<%= url %> </a> (<%= urls[url]%>)</li>
-        <form method="POST" action="/<%= url %>/delete">
-
-          <button>Delete</button>
-          </form>
-      <% } %>
-
-
+    <% for (url in urls){ %>
+    <li><a href="http://localhost:8080/<%= url %>">http://localhost:8080/<%= url %> </a> (<%= urls[url]%>)</li>
+      <form method="POST" action="/<%= url %>/delete">
+        <button>Delete</button>
+        <a href="http://localhost:8080/urls/<%= url %>">edit</a>
+      </form>
+    <% } %>
     </ul>
 </body>
 </html>
